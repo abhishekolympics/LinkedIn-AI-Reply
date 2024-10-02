@@ -69,3 +69,8 @@ Contributions are welcome! Feel free to raise issues or submit pull requests for
 ## Demo Video
 
 Check out a demo of the extension in action here:
+
+
+
+https://github.com/user-attachments/assets/900e2789-d385-47d4-9729-1d26b4529177
+
