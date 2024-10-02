@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "name": "LinkedIn AI Reply",
+  "description": "A Chrome extension that runs on LinkedIn and assists users in generating replies to messages",
+  "version": "1.0",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "tabs"
+  ],
+  "commands": {
+    "wxt:reload-extension": {
+      "description": "Reload the extension during development",
+      "suggested_key": {
+        "default": "Alt+R"
+      }
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "LinkedIn AI Reply",
+    "default_popup": "popup.html"
+  },
+  "host_permissions": [
+    "*://*.google.com/*",
+    "*://*.linkedin.com/*",
+    "http://localhost/*"
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self' 'wasm-unsafe-eval' http://localhost:3000; object-src 'self';",
+    "sandbox": "script-src 'self' 'unsafe-inline' 'unsafe-eval' http://localhost:3000; sandbox allow-scripts allow-forms allow-popups allow-modals; child-src 'self';"
+  }
+}
